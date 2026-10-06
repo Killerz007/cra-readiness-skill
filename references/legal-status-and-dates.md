@@ -9,7 +9,7 @@ This file is the single place where the skill states *what law applies, from whe
 | Regulation (EU) 2024/2847 of 23 October 2024 (OJ L, 2024/2847, 20.11.2024) | the CRA | In force since 10 December 2024 | `CRA-2024-2847.xhtml` |
 | Corrigendum of 5 December 2024 | — | Corrects Article 64(10): "paragraphs 2 to 9", not "3 to 9" | noted in manifest |
 | Commission Implementing Regulation (EU) 2025/2392 of 28 November 2025 | technical descriptions | In force since 21 December 2025 | `IR-2025-2392.xhtml` |
-| Commission Delegated Regulation (EU) 2026/881 of 11 December 2025 (OJ L, 2026/881, 20.4.2026) | delayed dissemination | In force (20 days after publication) | `CDR-2026-0881.txt` |
+| Commission Delegated Regulation (EU) 2026/881 of 11 December 2025 (OJ L, 2026/881, 20.4.2026) | delayed dissemination | In force (20 days after publication) | `CDR-2026-0881.xhtml` |
 
 Only the Official Journal text is authentic. The pinned copies are the Publications Office XHTML manifestations, hashed in `official/upstream-manifest.json`.
 

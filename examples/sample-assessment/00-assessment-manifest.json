@@ -29,8 +29,8 @@
   "legal_baseline": {
     "regulation_sha256": "fe0cca4a0caec50e7cf5a91432b94a19b211f86be8584fdba56372bdcea571ed",
     "implementing_regulation_2025_2392_sha256": "8dd48c7990527289ea46b5bd2f3c4dbbac95a89d99de2f3aa5388c3bc9398e0e",
-    "delegated_regulation_2026_881_sha256": "250e610f32cef16b51881d4564d5b15058505d340021b983f4d5a6312178e1fb",
-    "manifest_last_checked_utc": "2026-10-06T17:40:00+00:00",
+    "delegated_regulation_2026_881_sha256": "87e373481fb6df59f6634f6e9613a58b26d1617ac603c9f1df8258525911c0a9",
+    "manifest_last_checked_utc": "2026-10-06T14:16:00+00:00",
     "sync_check_result": "unchanged"
   },
   "standards_status_check": {

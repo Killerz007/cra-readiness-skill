@@ -430,14 +430,18 @@ def main():
                 raise
     new_sources = {}
     for key, src in SOURCES.items():
+        old_entry = (old.get('sources') or {}).get(key, {})
         if key in fetched:
             b = fetched[key]
-            new_sources[key] = {'celex': src['celex'], 'title': src['title'], 'eli': src['eli'], 'oj': src['oj'],
-                                'cellar_url': f'http://publications.europa.eu/resource/celex/{src["celex"]}',
-                                'local_file': src['local_file'], 'sha256': sha256(b), 'size': len(b),
-                                'fetched_at_utc': datetime.now(timezone.utc).isoformat()}
-        elif key in (old.get('sources') or {}):
-            new_sources[key] = {**old['sources'][key], 'fetch_warning': errors.get(key)}
+            # Keep maintainer-curated fields (corrigenda notes, entry-into-force dates) and refresh only what the fetch owns.
+            entry = {k: v for k, v in old_entry.items() if k not in {'fetch_warning', 'format_note'}}
+            entry.update({'celex': src['celex'], 'title': src['title'], 'eli': src['eli'], 'oj': src['oj'],
+                          'cellar_url': f'http://publications.europa.eu/resource/celex/{src["celex"]}',
+                          'local_file': src['local_file'], 'sha256': sha256(b), 'size': len(b),
+                          'fetched_at_utc': datetime.now(timezone.utc).isoformat()})
+            new_sources[key] = entry
+        elif old_entry:
+            new_sources[key] = {**old_entry, 'fetch_warning': errors.get(key)}
     changed = {k for k, v in new_sources.items() if (old.get('sources') or {}).get(k, {}).get('sha256') != v.get('sha256')}
     summary = {'changed': sorted(changed), 'fetch_errors': errors}
     if args.check:
