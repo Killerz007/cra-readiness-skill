@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Requirement Matrix Row",
+  "type": "object",
+  "required": [
+    "provision_id",
+    "status"
+  ],
+  "properties": {
+    "provision_id": {
+      "type": "string",
+      "pattern": "^(AI\\.P[12]\\.|AII\\.|AV\\.|AVII\\.|A1[34]\\.)[0-9a-z]+$"
+    },
+    "source": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "CONFORMANT",
+        "GAP",
+        "NOT_APPLICABLE",
+        "BLOCKED",
+        "NOT_ASSESSED"
+      ]
+    },
+    "applicability_justification": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "test_method": {
+      "type": "string"
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gap_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "adjudication_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "solution_description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Annex VII point 5: the solution adopted to meet the requirement where no harmonised standard is applied"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

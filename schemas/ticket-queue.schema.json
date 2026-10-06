@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Gap Ticket Queue",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "ticket_creation_authorized",
+    "tickets"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "assessment_product_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ticket_creation_authorized": {
+      "type": "boolean"
+    },
+    "note": {
+      "type": "string"
+    },
+    "tickets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "gap_id",
+          "regression_key",
+          "title",
+          "severity",
+          "body"
+        ],
+        "properties": {
+          "gap_id": {
+            "type": "string"
+          },
+          "regression_key": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string"
+          },
+          "recommended_priority": {
+            "type": "string"
+          },
+          "provision_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dedupe_search_terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "body": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

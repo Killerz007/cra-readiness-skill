@@ -1,0 +1,92 @@
+name: Monthly official text check
+
+on:
+  schedule:
+    - cron: '23 4 2 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch and pin the official texts
+        id: sync
+        shell: bash
+        run: |
+          set +e
+          python scripts/sync_official_text.py --sync --summary-json /tmp/sync-summary.json 2>&1 | tee /tmp/sync.log
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Validate
+        id: validate
+        if: steps.sync.outputs.exit_code == '0'
+        shell: bash
+        run: |
+          set +e
+          { python scripts/validate_repo.py && python -m unittest discover -s tests -p 'test_*.py'; } 2>&1 | tee /tmp/validate.log
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Open issue when fetching or validation fails
+        if: steps.sync.outputs.exit_code != '0' || steps.validate.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          body=$( (cat /tmp/sync.log; echo; cat /tmp/validate.log) 2>/dev/null | tail -c 60000)
+          gh issue create --title "Official CRA text check requires maintainer review" --body "The scheduled check could not safely refresh or validate the pinned texts. The Publications Office cellar may have been unavailable, or the Official Journal markup may have changed.
+
+\`\`\`text
+${body}
+\`\`\`
+
+Do not treat the pinned baseline as current until this is reviewed."
+
+      - name: Classify changes
+        if: steps.sync.outputs.exit_code == '0' && steps.validate.outputs.exit_code == '0'
+        id: diff
+        shell: bash
+        run: |
+          if git diff --quiet; then echo "repo_changed=false" >> "$GITHUB_OUTPUT"; else echo "repo_changed=true" >> "$GITHUB_OUTPUT"; fi
+          changed=$(python -c "import json; print('true' if json.load(open('/tmp/sync-summary.json')).get('changed') else 'false')")
+          echo "material_changed=$changed" >> "$GITHUB_OUTPUT"
+
+      - name: Commit routine provenance refresh
+        if: steps.diff.outputs.repo_changed == 'true' && steps.diff.outputs.material_changed == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add official references
+          git commit -m "chore: record monthly official text check"
+          if ! git push origin HEAD:main; then
+            branch="bot/cra-check-${GITHUB_RUN_ID}"; git switch -c "$branch"; git push origin HEAD
+            gh pr create --base main --head "$branch" --title "chore: record monthly official text check" --body "Routine provenance refresh; no change to the pinned Official Journal texts."
+          fi
+
+      - name: Open review pull request for a changed official text
+        if: steps.diff.outputs.repo_changed == 'true' && steps.diff.outputs.material_changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          branch="bot/cra-upstream-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"; git add official references; git commit -m "chore: pinned official CRA text changed"; git push origin HEAD
+          gh pr create --base main --head "$branch" --title "review: pinned official CRA text changed" --body "The Publications Office returned a different document for at least one pinned CELEX number. Review \`official/UPSTREAM_CHANGE_REVIEW.md\`, confirm whether this is a corrigendum, consolidated text or converter change, update \`references/legal-status-and-dates.md\` and the assessment guide if wording changed, and merge only after human review."

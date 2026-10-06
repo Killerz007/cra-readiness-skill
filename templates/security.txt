@@ -1,0 +1,11 @@
+# RFC 9116 security.txt - serve at /.well-known/security.txt over HTTPS
+# Replace every placeholder. "Expires" is mandatory and must be in the future.
+Contact: mailto:security@example.com
+Contact: https://example.com/security/report
+Expires: 2027-12-31T23:59:59.000Z
+Encryption: https://example.com/security/pgp-key.txt
+Preferred-Languages: en
+Policy: https://example.com/security/coordinated-vulnerability-disclosure
+Acknowledgments: https://example.com/security/hall-of-fame
+Canonical: https://example.com/.well-known/security.txt
+# Cyber Resilience Act single point of contact (Article 13(17); Annex I Part II point (6); Annex II point 2)

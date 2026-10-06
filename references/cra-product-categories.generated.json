@@ -1,0 +1,259 @@
+{
+  "source": "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 (Cyber Resilience Act)",
+  "eli": "http://data.europa.eu/eli/reg/2024/2847/oj",
+  "oj": "OJ L, 2024/2847, 20.11.2024",
+  "pinned_sha256": "fe0cca4a0caec50e7cf5a91432b94a19b211f86be8584fdba56372bdcea571ed",
+  "generated_at": "2026-10-06T13:40:24.435500+00:00",
+  "annex_iii_iv_categories": {
+    "important_class_I": [
+      {
+        "number": 1,
+        "category": "Identity management systems and privileged access management software and hardware, including authentication and access control readers, including biometric readers"
+      },
+      {
+        "number": 2,
+        "category": "Standalone and embedded browsers"
+      },
+      {
+        "number": 3,
+        "category": "Password managers"
+      },
+      {
+        "number": 4,
+        "category": "Software that searches for, removes, or quarantines malicious software"
+      },
+      {
+        "number": 5,
+        "category": "Products with digital elements with the function of virtual private network (VPN)"
+      },
+      {
+        "number": 6,
+        "category": "Network management systems"
+      },
+      {
+        "number": 7,
+        "category": "Security information and event management (SIEM) systems"
+      },
+      {
+        "number": 8,
+        "category": "Boot managers"
+      },
+      {
+        "number": 9,
+        "category": "Public key infrastructure and digital certificate issuance software"
+      },
+      {
+        "number": 10,
+        "category": "Physical and virtual network interfaces"
+      },
+      {
+        "number": 11,
+        "category": "Operating systems"
+      },
+      {
+        "number": 12,
+        "category": "Routers, modems intended for the connection to the internet, and switches"
+      },
+      {
+        "number": 13,
+        "category": "Microprocessors with security-related functionalities"
+      },
+      {
+        "number": 14,
+        "category": "Microcontrollers with security-related functionalities"
+      },
+      {
+        "number": 15,
+        "category": "Application specific integrated circuits (ASIC) and field-programmable gate arrays (FPGA) with security-related functionalities"
+      },
+      {
+        "number": 16,
+        "category": "Smart home general purpose virtual assistants"
+      },
+      {
+        "number": 17,
+        "category": "Smart home products with security functionalities, including smart door locks, security cameras, baby monitoring systems and alarm systems"
+      },
+      {
+        "number": 18,
+        "category": "Internet connected toys covered by Directive 2009/48/EC of the European Parliament and of the Council ( 1"
+      },
+      {
+        "number": 19,
+        "category": "Personal wearable products to be worn or placed on a human body that have a health monitoring (such as tracking) purpose and to which Regulation (EU) 2017/745 or (EU) No 2017/746 do not apply, or personal wearable products that are intended for the use by and for children"
+      }
+    ],
+    "important_class_II": [
+      {
+        "number": 1,
+        "category": "Hypervisors and container runtime systems that support virtualised execution of operating systems and similar environments"
+      },
+      {
+        "number": 2,
+        "category": "Firewalls, intrusion detection and prevention systems"
+      },
+      {
+        "number": 3,
+        "category": "Tamper-resistant microprocessors"
+      },
+      {
+        "number": 4,
+        "category": "Tamper-resistant microcontrollers"
+      }
+    ],
+    "critical": [
+      {
+        "number": 1,
+        "category": "Hardware Devices with Security Boxes"
+      },
+      {
+        "number": 2,
+        "category": "Smart meter gateways within smart metering systems as defined in Article 2, point (23) of Directive (EU) 2019/944 of the European Parliament and of the Council ( 1 ) and other devices for advanced security purposes, including for secure cryptoprocessing"
+      },
+      {
+        "number": 3,
+        "category": "Smartcards or similar devices, including secure elements"
+      }
+    ]
+  },
+  "technical_descriptions": {
+    "important_class_I": [
+      {
+        "number": 1,
+        "category": "Identity management systems and privileged access management software and hardware, including authentication and access control readers, including biometric readers",
+        "technical_description": "Identity management systems are products with digital elements that provide mechanisms for authentication or authorisation and that may also provide mechanisms for the lifecycle management of identity credentials of natural persons, legal persons, devices or systems, such as identity registration, provisioning, maintenance, deregistration. These systems include access management systems that control access of natural persons, legal persons, devices or systems to digital resources or physical locations.\nPrivileged access management software is an access management system that controls and monitors access rights to IT or OT systems and sensitive information within an organisation, including systems enforcing differentiated access control policies for privileged users.\nThis category includes but is not limited to authentication and access control readers, biometric readers, single sign-on software, federated identity management software, one-time password software, hardware authentication devices such as transaction authentication number (TAN) generators, authentication software and multi-factor authentication software."
+      },
+      {
+        "number": 2,
+        "category": "Standalone and embedded browsers",
+        "technical_description": "Software products with digital elements that enable end users to access, render, and interact with web content and services hosted on servers that are connected to networks such as the Internet. They typically include a browser engine for interpreting and displaying content written in markup language (e.g. HTML), support for web protocols (e.g. HTTP, HTTPS), the ability to execute scripts and manage user inputs as well as storage of temporary or persistent data from websites (cookies).\nThis category includes but is not limited to standalone applications that fulfil the functions of browsers, embedded browsers intended for integration into another system or application as well as browsers with AI agent integration."
+      },
+      {
+        "number": 3,
+        "category": "Password managers",
+        "technical_description": "Products with digital elements that store passwords, locally on a device or on a remote server, including activities such as generation of passwords as well as password sharing and integration with local or third-party applications for usage of passwords.\nThis category includes but is not limited to local password managers, password managers provided as browser extensions, enterprise password managers as well as hardware-based password managers."
+      },
+      {
+        "number": 4,
+        "category": "Software that searches for, removes, or quarantines malicious software",
+        "technical_description": "Software products with digital elements, typically referred to as antivirus or antimalware, that detect or search for malicious software or code on devices, or remove or quarantine such software or code, in order to maintain the integrity, confidentiality, or availability of such devices.\nIn the context of this category of products, malicious software means software containing malicious features or capabilities that can cause harm directly or indirectly to the user and/or the computer system, such as viruses, worms, ransomware, spyware and trojans.\nThis category includes but is not limited to software that detects or searches for malicious software in real-time or manually, rootkit detection and rescue disks with the core functionality of searching, removing or quarantining malicious software."
+      },
+      {
+        "number": 5,
+        "category": "Products with digital elements with the function of virtual private network (VPN)",
+        "technical_description": "Products with digital elements that establish an encrypted logical tunnel that is constructed from the system resources of a physical or virtual network.\nThis category includes but is not limited to virtual private network clients, virtual private network servers and virtual private network gateways."
+      },
+      {
+        "number": 6,
+        "category": "Network management systems",
+        "technical_description": "Products with digital elements that manage connected network elements, such as servers, routers, switches, workstations, printers or mobile devices, by monitoring them and controlling their network operations and configuration.\nThis category includes but is not limited to end-to-end management systems and dedicated configuration management systems, such as controllers for software-defined networking."
+      },
+      {
+        "number": 7,
+        "category": "Security information and event management (SIEM) systems",
+        "technical_description": "Products with digital elements that collect data from multiple sources, analyse and correlate that data and present it as actionable information for security-related purposes, such as threat and incident detection, forensic analysis or compliance purposes."
+      },
+      {
+        "number": 8,
+        "category": "Boot managers",
+        "technical_description": "Software products with digital elements that manage the process of initial system startup after power on/restart by initialising hardware, loading or transferring control to the operating system environment or system resources, and selecting boot options.\nThis category includes but is not limited to UEFI firmware, single-stage and multi-stage boot loaders."
+      },
+      {
+        "number": 9,
+        "category": "Public key infrastructure and digital certificate issuance software",
+        "technical_description": "Products with digital elements used as part of a public key infrastructure (PKI) that manage the validation, creation, issuance, distribution, status publication, renewal or revocation of digital certificates, or the generation, storage, escrow, exchange, destruction or rotation of cryptographic keys associated with such digital certificates.\nThis category includes but is not limited to key management systems, digital certificate management systems, online certificate status protocol responders and all-in-one PKI solutions."
+      },
+      {
+        "number": 10,
+        "category": "Physical and virtual network interfaces",
+        "technical_description": "Physical network interfaces are products with digital elements that directly connect a device to a network via an application programming interface (API) provided by the interface drivers, typically operating at the data link layer, and that feature hardware adapters to transmission media with corresponding firmware, typically operating at the physical and data link layer.\nVirtual network interfaces are products with digital elements that directly or indirectly connect a device to a network via an API that emulates that of drivers of physical network interfaces, typically operating at the data link layer.\nThis category includes but is not limited to wired and wireless network interface cards, controllers and adapters, such as for Wi-Fi, Ethernet, IrDA, USB, Bluetooth, NearLink, Zigbee, or Fieldbus, as well as purely virtual standalone products, such as virtual network interface cards, container network interfaces and VPN interfaces."
+      },
+      {
+        "number": 11,
+        "category": "Operating systems",
+        "technical_description": "Software products with digital elements that provide an abstract interface of the underlying hardware and control the execution of software, and that may provide services such as computing resource management and configuration, scheduling, input-output control, managing data, and providing an interface through which applications interact with system resources and peripherals.\nThis category includes but is not limited to real-time operating systems, general-purpose and special-purpose operating systems."
+      },
+      {
+        "number": 12,
+        "category": "Routers, modems intended for the connection to the internet, and switches",
+        "technical_description": "Routers are products with digital elements that establish and control the flow of data between different networks by selecting paths or routes using routing protocol mechanisms and algorithms, typically operating at the network layer.\nThis category includes but is not limited to wired and wireless routers, virtual routers and routers with or without modems."
+      },
+      {
+        "number": 13,
+        "category": "Microprocessors with security-related functionalities",
+        "technical_description": "Products with digital elements that are integrated circuits that carry out central processing functions relying on external memory and peripherals, including microcode and other low-level firmware. They additionally provide security-related functionalities, such as encryption, authentication, secure key storage, random number generation, trusted execution environment, or other hardware-based protection mechanisms, that aim to secure other products, networks or services beyond the microprocessor itself, such as secure boot chain, virtualization or secure communication interfaces."
+      },
+      {
+        "number": 14,
+        "category": "Microcontrollers with security-related functionalities",
+        "technical_description": "Products with digital elements that are integrated circuits that carry out central processing functions integrating memory allowing the microcontroller to be programmable and typically also other peripherals, including microcode and other low-level firmware. They additionally provide security-related functionalities, such as encryption, authentication, secure key storage, random number generation, trusted execution environment, or other hardware-based protection mechanisms, that aim to secure other products, networks or services beyond the microcontroller itself, such as secure boot chain, virtualization or secure communication interfaces."
+      },
+      {
+        "number": 15,
+        "category": "Application specific integrated circuits (ASIC) and field-programmable gate arrays (FPGA) with security-related functionalities",
+        "technical_description": "Application specific integrated circuits (ASIC) with security-related functionalities are products with digital elements that are integrated circuits, fully or partially custom-designed to perform a specific function or implement a specific application, including microcode and other low-level firmware. They additionally provide security-related functionalities, such as encryption, authentication, secure key storage, random number generation, trusted execution environment, or other hardware-based protection mechanisms, that aim to secure other products, networks or services beyond the ASIC itself, such as secure boot chain, virtualization or secure communication interfaces."
+      },
+      {
+        "number": 16,
+        "category": "Smart home general purpose virtual assistants",
+        "technical_description": "Products with digital elements that communicate on the public Internet, whether directly or via other equipment, that process demands, tasks or questions based on natural language prompts, such as through audio or written input, and that, based on those demands, tasks or questions, provide access to other services or control the functions of connected devices in residential settings.\nThis category includes but is not limited to smart speakers with an integrated virtual assistant, and standalone virtual assistants that meet this description."
+      },
+      {
+        "number": 17,
+        "category": "Smart home products with security functionalities, including smart door locks, security cameras, baby monitoring systems and alarm systems",
+        "technical_description": "Products with digital elements that protect the physical security of consumers in a residential setting and which can be controlled or managed remotely from other systems, as well as hardware and software that centrally control such products.\nThis category includes but is not limited to smart door locking devices, baby monitoring systems, alarm systems and home security cameras."
+      },
+      {
+        "number": 18,
+        "category": "Internet connected toys covered by Directive 2009/48/EC of the European Parliament and of the Council ( 1 ) that have social interactive features (e.g. speaking or filming) or that have location tracking features",
+        "technical_description": "Internet connected toys that have social interactive features are products with digital elements that are covered by Directive 2009/48/EC, that communicate on the public Internet, whether directly or via any other equipment, and that have embedded technologies that enable inbound and outbound communication, such as keyboard, microphone, speaker or camera."
+      },
+      {
+        "number": 19,
+        "category": "Personal wearable products to be worn or placed on a human body that have a health monitoring (such as tracking) purpose and to which Regulation (EU) 2017/745 ( 2 ) or (EU) 2017/746 of the European Parliament and of the Council ( 3 ) do not apply, or personal wearable products that are intended for the use by and for children",
+        "technical_description": "Personal wearable products to be worn or placed on a human body that have a health monitoring purpose are products with digital elements that are worn on the body directly or via clothing or accessories and that can, regularly or continuously, sense and further process information, including body metrics, relevant to the user\u2019s health, excluding products that fall within the scope of Regulation (EU) 2017/745 or of Regulation (EU) 2017/746.\nThis category includes but is not limited to fitness trackers, smartwatches, smart jewellery, smart clothing and sports apparel that meet this description."
+      }
+    ],
+    "important_class_II": [
+      {
+        "number": 1,
+        "category": "Hypervisors and container runtime systems that support virtualised execution of operating systems and similar environments",
+        "technical_description": "Hypervisors are software products with digital elements that abstract and/or allocate computing resources and enable the execution, management and orchestration of virtual machines that are logically separated from each other and/or from the physical hardware. Hypervisors may run directly on hardware (bare metal), on top of an operating system, or within another virtual machine (nested virtualisation).\nIn the context of this category of products, a virtual machine is a software-defined logical separation of a computing environment, which includes a virtualised set of hardware resources (e.g. CPU, memory, storage, network interfaces) and typically hosts its own operating system.\nThis category includes but is not limited to type 1 hypervisors (bare metal), type 2 hypervisors (hosted on an operating system) and hybrid hypervisors."
+      },
+      {
+        "number": 2,
+        "category": "Firewalls, intrusion detection and prevention systems",
+        "technical_description": "Firewalls are products with digital elements that protect a connected network or system from unauthorized access by monitoring and restricting data communication traffic to and from that network.\nThis category includes but is not limited to network firewalls and application firewalls such as web application firewalls or filters and anti-spam gateways."
+      },
+      {
+        "number": 3,
+        "category": "Tamper-resistant microprocessors",
+        "technical_description": "Products with digital elements that are microprocessors with security-related functionalities referred to in Table \u2018Class I\u2019, point 13, of this Annex, including tamper evidence, resistance or response, and which additionally are designed to provide protection of AVA_VAN level 2 or 3, as set out in the Common Criteria and the Common Evaluation Methodology."
+      },
+      {
+        "number": 4,
+        "category": "Tamper-resistant microcontrollers",
+        "technical_description": "Products with digital elements that are microcontrollers with security-related functionalities referred to in Table \u2018Class I\u2019, point 14, of this Annex, including tamper evidence, resistance or response, and which additionally are designed to provide protection of AVA_VAN level 2 or 3, as set out in the Common Criteria and the Common Evaluation Methodology."
+      }
+    ],
+    "critical": [
+      {
+        "number": 1,
+        "category": "Hardware Devices with Security Boxes",
+        "technical_description": "Hardware products with digital elements that securely store, process, or manage sensitive data or perform cryptographic operations, and that consist of multiple discrete components, incorporating a hardware physical envelope providing tamper evidence, resistance or response as countermeasures against physical attacks.\nThis category includes but is not limited to physical payment terminals, hardware security modules that generate and manage cryptographic elements, and tachographs that meet the above description."
+      },
+      {
+        "number": 2,
+        "category": "Smart meter gateways within smart metering systems as defined in Article 2(23) of Directive (EU) 2019/944 of the European Parliament and of the Council ( 1 ) and other devices for advanced security purposes, including for secure cryptoprocessing",
+        "technical_description": "Smart meter gateways are products with digital elements that control communication between components in or connected to smart metering systems as defined in Article 2(23) of Directive (EU) 2019/944, and authorised third parties, such as utility providers. Smart meter gateways collect, process and store meter or personal data, protect data and information flows by supporting specific cryptographic needs, such as encryption and decryption of data, incorporate firewalling functionalities and provide the means to control other devices.\nThis category includes but is not limited to smart meter gateways related to smart metering systems measuring electricity as defined in Article 2(23) of Directive (EU) 2019/944. It may also include smart meter gateways used in other smart metering systems measuring consumption of other sources of energy such as gas or heat, provided that the gateway meets this description."
+      },
+      {
+        "number": 3,
+        "category": "Smartcards or similar devices, including secure elements",
+        "technical_description": "Secure elements are microcontrollers or microprocessors with security-related functionalities, including tamper evidence, resistance or response. They typically store, process, or manage cryptographic operations or sensitive data, such as identity credentials or payment credentials. Secure elements are designed to provide protection of at least AVA_VAN.4, as set out in the Common Criteria or the Common Evaluation Methodology. They can be discrete silicon or can be integrated into systems on chip (SoC). Secure elements can incorporate an application environment or an operating system, and can include one or more applications.\nThis category includes but is not limited to Trusted Platform Modules (TPMs) and embedded Universal Integrated Circuit Card (UICC)."
+      }
+    ]
+  },
+  "technical_descriptions_source": "Commission Implementing Regulation (EU) 2025/2392 of 28 November 2025 on the technical description of the categories of important and critical products with digital elements",
+  "technical_descriptions_eli": "http://data.europa.eu/eli/reg_impl/2025/2392/oj"
+}

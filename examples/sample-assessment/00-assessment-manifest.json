@@ -1,0 +1,52 @@
+{
+  "product_name": "Example Sensor Hub",
+  "product_type": "hardware_with_software",
+  "product_version": "3.1.0",
+  "variants_covered": [
+    "SH-300",
+    "SH-300-PoE"
+  ],
+  "repository": "https://github.com/example/sensor-hub",
+  "commit_sha": "0123456789abcdef0123456789abcdef01234567",
+  "build_identifiers": [
+    "firmware-3.1.0+build.812"
+  ],
+  "artefact_hashes": {
+    "sensorhub-3.1.0.bin": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "remote_data_processing_solutions": [
+    "Example Cloud device management backend (manufacturer-developed)"
+  ],
+  "target_environment": "manufacturer staging fleet",
+  "assessment_mode": "full",
+  "economic_operator_role": "manufacturer",
+  "manufacturer_main_establishment_member_state": "NL",
+  "authorization_status": "authorized-runtime",
+  "ticket_mode": "queue",
+  "external_ticket_creation_authorized": false,
+  "started_at_utc": "2026-10-01T08:00:00+00:00",
+  "assessor": "independent readiness assessment (fictional)",
+  "legal_baseline": {
+    "regulation_sha256": "fe0cca4a0caec50e7cf5a91432b94a19b211f86be8584fdba56372bdcea571ed",
+    "implementing_regulation_2025_2392_sha256": "8dd48c7990527289ea46b5bd2f3c4dbbac95a89d99de2f3aa5388c3bc9398e0e",
+    "delegated_regulation_2026_881_sha256": "ba58ba9c49abc2925e65f3fea23192dcdd0ccd53a34bad6bbe674c5db5155667",
+    "manifest_last_checked_utc": "2026-10-06T17:40:00+00:00",
+    "sync_check_result": "unchanged"
+  },
+  "standards_status_check": {
+    "performed_at_utc": "2026-10-01T08:30:00+00:00",
+    "harmonised_standards_cited": false,
+    "search_performed": "EUR-Lex search for implementing decisions citing Regulation (EU) 2024/2847 harmonised standards",
+    "result": "none cited; presumption of conformity unavailable"
+  },
+  "date_regime": "not_yet_placed",
+  "classification": {
+    "class": "default"
+  },
+  "scanner_versions": {
+    "syft": "1.x",
+    "grype": "0.x",
+    "semgrep": "1.x"
+  },
+  "note": "Fictional sample used by tests and documentation. Not a real product or assessment."
+}

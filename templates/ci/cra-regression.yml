@@ -1,0 +1,54 @@
+name: CRA regression check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cra-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout product
+        uses: actions/checkout@v4
+
+      - name: Checkout CRA readiness skill
+        uses: actions/checkout@v4
+        with:
+          repository: Killerz007/cra-readiness-skill
+          path: .cra-skill
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # PROJECT-SPECIFIC STEP:
+      # Regenerate the SBOM for this build and run the repeatable checks approved
+      # for your accepted baseline. Produce:
+      #   .cra/current/07-requirement-matrix.csv
+      #   .cra/current/11-gaps-register.jsonl
+      #   .cra/current/sbom.cdx.json
+      # Example:
+      # - run: syft . -o cyclonedx-json > .cra/current/sbom.cdx.json
+      # - run: npm ci && npm run cra:regression
+
+      - name: Validate SBOM against the CRA minimum
+        run: |
+          python .cra-skill/scripts/check_sbom.py .cra/current/sbom.cdx.json --output .cra/regression/sbom-check.json
+
+      - name: Compare with accepted baseline
+        run: |
+          python .cra-skill/scripts/compare_assessments.py \
+            --baseline .cra/baseline \
+            --current .cra/current \
+            --output .cra/regression \
+            --partial
+
+      - name: Upload regression evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cra-regression
+          path: .cra/regression/

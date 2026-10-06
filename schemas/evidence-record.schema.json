@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Evidence Record",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "provision_ids",
+    "type",
+    "source",
+    "timestamp",
+    "procedure",
+    "observed_result",
+    "conclusion_supported"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^E-[0-9]{3,}$"
+    },
+    "provision_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "type": {
+      "enum": [
+        "runtime_observation",
+        "build_artifact",
+        "process_record",
+        "source_excerpt",
+        "scanner_output",
+        "policy_document",
+        "third_party_attestation",
+        "manufacturer_statement",
+        "screenshot",
+        "other"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "product_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commit_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "environment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "collector": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "procedure": {
+      "type": "string"
+    },
+    "expected_result": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "observed_result": {
+      "type": "string"
+    },
+    "conclusion_supported": {
+      "type": "string"
+    },
+    "artifact_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "redacted": {
+      "type": "boolean"
+    },
+    "limitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

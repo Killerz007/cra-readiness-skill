@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Substantial Modification Screening",
+  "type": "object",
+  "required": [
+    "change_set",
+    "answers",
+    "conclusion",
+    "confidence",
+    "legal_confirmation_recommended"
+  ],
+  "properties": {
+    "change_set": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "from_version": {
+          "type": "string"
+        },
+        "to_version": {
+          "type": "string"
+        },
+        "commits_or_release_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "security_update_only": {
+      "type": "boolean"
+    },
+    "changes_intended_purpose": {
+      "type": "boolean"
+    },
+    "answers": {
+      "type": "object",
+      "required": [
+        "new_threat_vectors",
+        "new_attack_scenarios",
+        "changed_likelihood",
+        "changed_impact"
+      ],
+      "properties": {
+        "new_threat_vectors": {
+          "$ref": "#/$defs/answer"
+        },
+        "new_attack_scenarios": {
+          "$ref": "#/$defs/answer"
+        },
+        "changed_likelihood": {
+          "$ref": "#/$defs/answer"
+        },
+        "changed_impact": {
+          "$ref": "#/$defs/answer"
+        }
+      }
+    },
+    "risk_assessment_assumptions_still_valid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "conclusion": {
+      "enum": [
+        "not_substantial",
+        "substantial",
+        "undetermined_pending_risk_assessment_update"
+      ]
+    },
+    "provisions_requiring_reassessment": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consequences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "legal_confirmation_recommended": {
+      "type": "boolean"
+    },
+    "screened_at_utc": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "answer": {
+      "type": "object",
+      "required": [
+        "answer",
+        "reasoning"
+      ],
+      "properties": {
+        "answer": {
+          "enum": [
+            "yes",
+            "no",
+            "unknown"
+          ]
+        },
+        "reasoning": {
+          "type": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,23 @@
+{
+  "core_functionality": "Collects sensor readings from wired sensors and forwards them to the manufacturer's cloud; local dashboard; no routing, firewall or security function for other devices.",
+  "category_matches": [
+    {
+      "category_ref": "AIII.I.12",
+      "relationship": "no_overlap",
+      "reasoning": "Does not establish or control data flows between networks; no routing protocol."
+    },
+    {
+      "category_ref": "AIII.I.17",
+      "relationship": "substantially_falls_short",
+      "reasoning": "Not intended to protect physical security of consumers in residential settings; industrial sensor hub."
+    }
+  ],
+  "modules_sold_separately": [],
+  "foss_product_with_public_technical_documentation": false,
+  "harmonised_standards_cited_and_applied_in_full": false,
+  "certification_scheme_available_substantial": false,
+  "article_8_delegated_act_requires_certification": false,
+  "confidence": "High",
+  "borderline": false,
+  "strongest_counter_argument": "If sold into residential alarm use cases it could be argued to be a smart home security product (Annex III class I point 17)."
+}

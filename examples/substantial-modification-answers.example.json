@@ -1,0 +1,41 @@
+{
+  "change_set": {
+    "description": "Add remote firmware rollback endpoint reachable from the cloud backend",
+    "from_version": "3.1.0",
+    "to_version": "3.2.0",
+    "commits_or_release_notes": [
+      "feat: remote rollback API",
+      "chore: deps"
+    ]
+  },
+  "security_update_only": false,
+  "changes_intended_purpose": false,
+  "answers": {
+    "new_threat_vectors": {
+      "answer": "yes",
+      "reasoning": "New externally reachable interface on the device accepting commands from the backend.",
+      "evidence_ids": [
+        "E-050"
+      ]
+    },
+    "new_attack_scenarios": {
+      "answer": "yes",
+      "reasoning": "Forced downgrade to a vulnerable firmware version if authentication of the command is weak.",
+      "evidence_ids": [
+        "E-050"
+      ]
+    },
+    "changed_likelihood": {
+      "answer": "no",
+      "reasoning": "Existing scenarios unchanged.",
+      "evidence_ids": []
+    },
+    "changed_impact": {
+      "answer": "no",
+      "reasoning": "Impact of existing scenarios unchanged.",
+      "evidence_ids": []
+    }
+  },
+  "risk_assessment_assumptions_still_valid": false,
+  "touches_product_boundary": true
+}

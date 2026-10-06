@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Regression Summary",
+  "type": "object",
+  "required": [
+    "generated_at",
+    "baseline",
+    "current",
+    "result",
+    "blocking_regressions",
+    "review_required",
+    "improvements"
+  ],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "baseline": {
+      "type": "string"
+    },
+    "current": {
+      "type": "string"
+    },
+    "partial_comparison": {
+      "type": "boolean"
+    },
+    "minimum_gap_severity": {
+      "type": "string"
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "blocking_regressions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "review_required": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "improvements": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "limitation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

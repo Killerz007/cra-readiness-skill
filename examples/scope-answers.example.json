@@ -1,0 +1,34 @@
+{
+  "product_name": "Example Sensor Hub",
+  "product_kind": "hardware_with_software",
+  "software_operated_on_user_side": true,
+  "has_data_connection": true,
+  "made_available_in_eu": true,
+  "commercial_model": "price",
+  "is_foss": false,
+  "is_legal_person": true,
+  "provides_sustained_support": false,
+  "exclusion": "none",
+  "exclusion_borderline": false,
+  "remote_components": [
+    {
+      "name": "Example Cloud device management backend",
+      "at_a_distance": true,
+      "absence_prevents_function": true,
+      "developed_by_or_for_manufacturer": true,
+      "affects_product_security": true
+    },
+    {
+      "name": "Third-party SaaS analytics",
+      "at_a_distance": true,
+      "absence_prevents_function": false,
+      "developed_by_or_for_manufacturer": false,
+      "affects_product_security": true
+    }
+  ],
+  "placed_on_market_date": null,
+  "substantially_modified_from_2027_12_11": null,
+  "separately_supplied_components": [],
+  "economic_operator_role": "manufacturer",
+  "user_disputes_outcome": false
+}

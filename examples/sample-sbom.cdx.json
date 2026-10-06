@@ -1,0 +1,99 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-01T09:00:00Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "example-sbom-generator",
+          "version": "1.0"
+        }
+      ]
+    },
+    "component": {
+      "type": "firmware",
+      "bom-ref": "pkg:generic/sensorhub-firmware@3.1.0",
+      "name": "sensorhub-firmware",
+      "version": "3.1.0",
+      "supplier": {
+        "name": "Example Devices BV"
+      }
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/mbedtls@3.6.2",
+      "name": "mbedtls",
+      "version": "3.6.2",
+      "purl": "pkg:generic/mbedtls@3.6.2",
+      "supplier": {
+        "name": "Arm"
+      },
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/lwip@2.2.0",
+      "name": "lwip",
+      "version": "2.2.0",
+      "purl": "pkg:generic/lwip@2.2.0",
+      "supplier": {
+        "name": "lwIP project"
+      },
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:generic/cjson@1.7.18",
+      "name": "cjson",
+      "version": "1.7.18",
+      "purl": "pkg:generic/cjson@1.7.18",
+      "supplier": {
+        "name": "DaveGamble"
+      }
+    },
+    {
+      "type": "operating-system",
+      "bom-ref": "pkg:generic/freertos@11.1.0",
+      "name": "freertos",
+      "version": "11.1.0",
+      "purl": "pkg:generic/freertos@11.1.0",
+      "supplier": {
+        "name": "Amazon"
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:generic/sensorhub-firmware@3.1.0",
+      "dependsOn": [
+        "pkg:generic/mbedtls@3.6.2",
+        "pkg:generic/lwip@2.2.0",
+        "pkg:generic/cjson@1.7.18",
+        "pkg:generic/freertos@11.1.0"
+      ]
+    }
+  ]
+}

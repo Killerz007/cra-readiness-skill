@@ -1,0 +1,364 @@
+{
+  "source": "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 (Cyber Resilience Act)",
+  "eli": "http://data.europa.eu/eli/reg/2024/2847/oj",
+  "oj": "OJ L, 2024/2847, 20.11.2024",
+  "pinned_sha256": "fe0cca4a0caec50e7cf5a91432b94a19b211f86be8584fdba56372bdcea571ed",
+  "generated_at": "2026-10-06T13:40:24.435500+00:00",
+  "articles": [
+    {
+      "number": 1,
+      "title": "Subject matter",
+      "paragraphs": 1
+    },
+    {
+      "number": 2,
+      "title": "Scope",
+      "paragraphs": 8
+    },
+    {
+      "number": 3,
+      "title": "Definitions",
+      "paragraphs": 1
+    },
+    {
+      "number": 4,
+      "title": "Free movement",
+      "paragraphs": 4
+    },
+    {
+      "number": 5,
+      "title": "Procurement or use of products with digital elements",
+      "paragraphs": 2
+    },
+    {
+      "number": 6,
+      "title": "Requirements for products with digital elements",
+      "paragraphs": 1
+    },
+    {
+      "number": 7,
+      "title": "Important products with digital elements",
+      "paragraphs": 4
+    },
+    {
+      "number": 8,
+      "title": "Critical products with digital elements",
+      "paragraphs": 2
+    },
+    {
+      "number": 9,
+      "title": "Stakeholder consultation",
+      "paragraphs": 2
+    },
+    {
+      "number": 10,
+      "title": "Enhancing skills in a cyber resilient digital environment",
+      "paragraphs": 1
+    },
+    {
+      "number": 11,
+      "title": "General product safety",
+      "paragraphs": 1
+    },
+    {
+      "number": 12,
+      "title": "High-risk AI systems",
+      "paragraphs": 4
+    },
+    {
+      "number": 13,
+      "title": "Obligations of manufacturers",
+      "paragraphs": 25
+    },
+    {
+      "number": 14,
+      "title": "Reporting obligations of manufacturers",
+      "paragraphs": 10
+    },
+    {
+      "number": 15,
+      "title": "Voluntary reporting",
+      "paragraphs": 5
+    },
+    {
+      "number": 16,
+      "title": "Establishment of a single reporting platform",
+      "paragraphs": 6
+    },
+    {
+      "number": 17,
+      "title": "Other provisions related to reporting",
+      "paragraphs": 6
+    },
+    {
+      "number": 18,
+      "title": "Authorised representatives",
+      "paragraphs": 3
+    },
+    {
+      "number": 19,
+      "title": "Obligations of importers",
+      "paragraphs": 8
+    },
+    {
+      "number": 20,
+      "title": "Obligations of distributors",
+      "paragraphs": 6
+    },
+    {
+      "number": 21,
+      "title": "Cases in which obligations of manufacturers apply to importers and distributors",
+      "paragraphs": 1
+    },
+    {
+      "number": 22,
+      "title": "Other cases in which obligations of manufacturers apply",
+      "paragraphs": 2
+    },
+    {
+      "number": 23,
+      "title": "Identification of economic operators",
+      "paragraphs": 2
+    },
+    {
+      "number": 24,
+      "title": "Obligations of open-source software stewards",
+      "paragraphs": 3
+    },
+    {
+      "number": 25,
+      "title": "Security attestation of free and open-source software",
+      "paragraphs": 1
+    },
+    {
+      "number": 26,
+      "title": "Guidance",
+      "paragraphs": 3
+    },
+    {
+      "number": 27,
+      "title": "Presumption of conformity",
+      "paragraphs": 9
+    },
+    {
+      "number": 28,
+      "title": "EU declaration of conformity",
+      "paragraphs": 5
+    },
+    {
+      "number": 29,
+      "title": "General principles of the CE marking",
+      "paragraphs": 1
+    },
+    {
+      "number": 30,
+      "title": "Rules and conditions for affixing the CE marking",
+      "paragraphs": 6
+    },
+    {
+      "number": 31,
+      "title": "Technical documentation",
+      "paragraphs": 5
+    },
+    {
+      "number": 32,
+      "title": "Conformity assessment procedures for products with digital elements",
+      "paragraphs": 6
+    },
+    {
+      "number": 33,
+      "title": "Support measures for microenterprises and small and medium-sized enterprises, including start-ups",
+      "paragraphs": 5
+    },
+    {
+      "number": 34,
+      "title": "Mutual recognition agreements",
+      "paragraphs": 1
+    },
+    {
+      "number": 35,
+      "title": "Notification",
+      "paragraphs": 2
+    },
+    {
+      "number": 36,
+      "title": "Notifying authorities",
+      "paragraphs": 4
+    },
+    {
+      "number": 37,
+      "title": "Requirements relating to notifying authorities",
+      "paragraphs": 6
+    },
+    {
+      "number": 38,
+      "title": "Information obligation on notifying authorities",
+      "paragraphs": 2
+    },
+    {
+      "number": 39,
+      "title": "Requirements relating to notified bodies",
+      "paragraphs": 12
+    },
+    {
+      "number": 40,
+      "title": "Presumption of conformity of notified bodies",
+      "paragraphs": 1
+    },
+    {
+      "number": 41,
+      "title": "Subsidiaries of and subcontracting by notified bodies",
+      "paragraphs": 4
+    },
+    {
+      "number": 42,
+      "title": "Application for notification",
+      "paragraphs": 3
+    },
+    {
+      "number": 43,
+      "title": "Notification procedure",
+      "paragraphs": 6
+    },
+    {
+      "number": 44,
+      "title": "Identification numbers and lists of notified bodies",
+      "paragraphs": 2
+    },
+    {
+      "number": 45,
+      "title": "Changes to notifications",
+      "paragraphs": 2
+    },
+    {
+      "number": 46,
+      "title": "Challenge of the competence of notified bodies",
+      "paragraphs": 4
+    },
+    {
+      "number": 47,
+      "title": "Operational obligations of notified bodies",
+      "paragraphs": 6
+    },
+    {
+      "number": 48,
+      "title": "Appeal against decisions of notified bodies",
+      "paragraphs": 1
+    },
+    {
+      "number": 49,
+      "title": "Information obligation on notified bodies",
+      "paragraphs": 2
+    },
+    {
+      "number": 50,
+      "title": "Exchange of experience",
+      "paragraphs": 1
+    },
+    {
+      "number": 51,
+      "title": "Coordination of notified bodies",
+      "paragraphs": 2
+    },
+    {
+      "number": 52,
+      "title": "Market surveillance and control of products with digital elements in the Union market",
+      "paragraphs": 16
+    },
+    {
+      "number": 53,
+      "title": "Access to data and documentation",
+      "paragraphs": 1
+    },
+    {
+      "number": 54,
+      "title": "Procedure at national level concerning products with digital elements presenting a significant cybersecurity risk",
+      "paragraphs": 9
+    },
+    {
+      "number": 55,
+      "title": "Union safeguard procedure",
+      "paragraphs": 5
+    },
+    {
+      "number": 56,
+      "title": "Procedure at Union level concerning products with digital elements presenting a significant cybersecurity risk",
+      "paragraphs": 7
+    },
+    {
+      "number": 57,
+      "title": "Compliant products with digital elements which present a significant cybersecurity risk",
+      "paragraphs": 11
+    },
+    {
+      "number": 58,
+      "title": "Formal non-compliance",
+      "paragraphs": 2
+    },
+    {
+      "number": 59,
+      "title": "Joint activities of market surveillance authorities",
+      "paragraphs": 5
+    },
+    {
+      "number": 60,
+      "title": "Sweeps",
+      "paragraphs": 5
+    },
+    {
+      "number": 61,
+      "title": "Exercise of the delegation",
+      "paragraphs": 6
+    },
+    {
+      "number": 62,
+      "title": "Committee procedure",
+      "paragraphs": 3
+    },
+    {
+      "number": 63,
+      "title": "Confidentiality",
+      "paragraphs": 4
+    },
+    {
+      "number": 64,
+      "title": "Penalties",
+      "paragraphs": 10
+    },
+    {
+      "number": 65,
+      "title": "Representative actions",
+      "paragraphs": 1
+    },
+    {
+      "number": 66,
+      "title": "Amendment to Regulation (EU) 2019/1020",
+      "paragraphs": 1
+    },
+    {
+      "number": 67,
+      "title": "Amendment to Directive (EU) 2020/1828",
+      "paragraphs": 1
+    },
+    {
+      "number": 68,
+      "title": "Amendment to Regulation (EU) No 168/2013",
+      "paragraphs": 1
+    },
+    {
+      "number": 69,
+      "title": "Transitional provisions",
+      "paragraphs": 3
+    },
+    {
+      "number": 70,
+      "title": "Evaluation and review",
+      "paragraphs": 2
+    },
+    {
+      "number": 71,
+      "title": "Entry into force and application",
+      "paragraphs": 2
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+EU Cyber Resilience Act Readiness Skill
+Copyright 2026 the cra-readiness-skill contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository reproduces, in official/current/, the following documents of the European Union:
+
+- Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 (Cyber Resilience Act), OJ L, 2024/2847, 20.11.2024, ELI: http://data.europa.eu/eli/reg/2024/2847/oj
+- Commission Implementing Regulation (EU) 2025/2392 of 28 November 2025, OJ L, 2025/2392, 1.12.2025, ELI: http://data.europa.eu/eli/reg_impl/2025/2392/oj
+- Commission Delegated Regulation (EU) 2026/881 of 11 December 2025, OJ L, 2026/881, 20.4.2026, ELI: http://data.europa.eu/eli/reg_del/2026/881/oj
+- Commission guidance on the application of Regulation (EU) 2024/2847, C(2026) 5252 final, 27 July 2026
+- Cyber Resilience Act implementation: frequently asked questions, European Commission
+
+Source: EUR-Lex / Publications Office of the European Union / European Commission, © European Union. Reuse is authorised provided the source is acknowledged, in accordance with Commission Decision 2011/833/EU on the reuse of Commission documents and the EUR-Lex copyright notice. Only European Union legislation published in the Official Journal of the European Union is deemed authentic. The pinned copies are provided for reference and traceability and are not substitutes for the Official Journal.
+
+This repository is not affiliated with, endorsed by, or acting on behalf of the European Union, the European Commission, ENISA, any market surveillance authority, notifying authority, notified body or European standardisation organisation.

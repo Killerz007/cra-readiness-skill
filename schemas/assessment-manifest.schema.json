@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Readiness Assessment Manifest",
+  "type": "object",
+  "required": [
+    "product_name",
+    "product_version",
+    "assessment_mode",
+    "economic_operator_role",
+    "started_at_utc",
+    "legal_baseline"
+  ],
+  "properties": {
+    "product_name": {
+      "type": "string"
+    },
+    "product_type": {
+      "enum": [
+        "software",
+        "hardware_with_software",
+        "hardware",
+        "combination"
+      ]
+    },
+    "product_version": {
+      "type": "string"
+    },
+    "variants_covered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "repository": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "commit_sha": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "build_identifiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artefact_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "remote_data_processing_solutions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "target_environment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assessment_mode": {
+      "enum": [
+        "scope",
+        "classify",
+        "full",
+        "delta",
+        "retest",
+        "regression",
+        "reporting-drill",
+        "evidence-pack"
+      ]
+    },
+    "economic_operator_role": {
+      "enum": [
+        "manufacturer",
+        "authorised_representative",
+        "importer",
+        "distributor",
+        "open_source_steward",
+        "deemed_manufacturer_article_21",
+        "deemed_manufacturer_article_22",
+        "undetermined"
+      ]
+    },
+    "manufacturer_main_establishment_member_state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authorization_status": {
+      "enum": [
+        "authorized-runtime",
+        "source-review-only",
+        "unknown"
+      ]
+    },
+    "ticket_mode": {
+      "enum": [
+        "off",
+        "queue",
+        "github",
+        "jira",
+        "auto"
+      ]
+    },
+    "external_ticket_creation_authorized": {
+      "type": "boolean"
+    },
+    "started_at_utc": {
+      "type": "string"
+    },
+    "assessor": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legal_baseline": {
+      "type": "object",
+      "required": [
+        "regulation_sha256",
+        "manifest_last_checked_utc"
+      ],
+      "properties": {
+        "regulation_sha256": {
+          "type": "string"
+        },
+        "implementing_regulation_2025_2392_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "delegated_regulation_2026_881_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "manifest_last_checked_utc": {
+          "type": "string"
+        },
+        "sync_check_result": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "standards_status_check": {
+      "type": "object",
+      "properties": {
+        "performed_at_utc": {
+          "type": "string"
+        },
+        "harmonised_standards_cited": {
+          "type": "boolean"
+        },
+        "search_performed": {
+          "type": "string"
+        },
+        "result": {
+          "type": "string"
+        }
+      }
+    },
+    "date_regime": {
+      "enum": [
+        "placed_on_or_after_2027-12-11",
+        "placed_before_2027-12-11_not_modified",
+        "placed_before_2027-12-11_substantially_modified",
+        "not_yet_placed",
+        "undetermined"
+      ]
+    },
+    "scanner_versions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

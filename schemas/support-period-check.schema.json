@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Support Period Check",
+  "type": "object",
+  "required": [
+    "placed_on_market",
+    "declared_support_period_end",
+    "expected_use_years",
+    "checks",
+    "result"
+  ],
+  "properties": {
+    "placed_on_market": {
+      "type": "string"
+    },
+    "declared_support_period_end": {
+      "type": "string"
+    },
+    "declared_support_period_years": {
+      "type": "number"
+    },
+    "expected_use_years": {
+      "type": "number"
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "message"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "warn",
+              "info"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "legal_basis": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "computed_dates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "PASS_WITH_WARNINGS"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

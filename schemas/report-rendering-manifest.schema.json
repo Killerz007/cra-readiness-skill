@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Report Rendering Manifest",
+  "type": "object",
+  "required": [
+    "canonical_markdown",
+    "outputs",
+    "rendered_at"
+  ],
+  "properties": {
+    "canonical_markdown": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "format",
+          "status"
+        ],
+        "properties": {
+          "format": {
+            "enum": [
+              "docx",
+              "pdf"
+            ]
+          },
+          "path": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "RENDERED",
+              "BLOCKED_RENDERING"
+            ]
+          },
+          "renderer": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "renderer_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "page_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "visual_qa": {
+            "enum": [
+              "passed",
+              "failed",
+              "not_performed"
+            ]
+          },
+          "limitations": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "rendered_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

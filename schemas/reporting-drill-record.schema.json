@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Article 14 Reporting Drill Record",
+  "type": "object",
+  "required": [
+    "drill_id",
+    "scenario_type",
+    "scenario",
+    "awareness_timestamp",
+    "deadlines",
+    "steps",
+    "outcome"
+  ],
+  "properties": {
+    "drill_id": {
+      "type": "string"
+    },
+    "scenario_type": {
+      "enum": [
+        "actively_exploited_vulnerability",
+        "severe_incident"
+      ]
+    },
+    "scenario": {
+      "type": "string"
+    },
+    "fictional": {
+      "type": "boolean",
+      "const": true
+    },
+    "detection_timestamp": {
+      "type": "string"
+    },
+    "awareness_timestamp": {
+      "type": "string"
+    },
+    "awareness_reasoning": {
+      "type": "string"
+    },
+    "csirt_endpoint": {
+      "type": "string"
+    },
+    "csirt_determination_basis": {
+      "type": "string"
+    },
+    "deadlines": {
+      "type": "object",
+      "properties": {
+        "early_warning_due": {
+          "type": "string"
+        },
+        "notification_due": {
+          "type": "string"
+        },
+        "final_report_due": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "final_report_rule": {
+          "type": "string"
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step",
+          "planned_by",
+          "completed_at",
+          "on_time"
+        ],
+        "properties": {
+          "step": {
+            "type": "string"
+          },
+          "planned_by": {
+            "type": "string"
+          },
+          "completed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "on_time": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "user_information_step": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "pass",
+        "pass_with_findings",
+        "fail"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

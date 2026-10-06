@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SBOM Check Report",
+  "type": "object",
+  "required": [
+    "sbom_path",
+    "sha256",
+    "format",
+    "result",
+    "checks"
+  ],
+  "properties": {
+    "sbom_path": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "spec_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "component_count": {
+      "type": "integer"
+    },
+    "top_level_dependency_count": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "PASS_WITH_WARNINGS"
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "level",
+          "status",
+          "message"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "level": {
+            "enum": [
+              "required",
+              "recommended",
+              "optional"
+            ]
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "warn",
+              "skip"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "legal_basis": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "lockfile_reconciliation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "generated_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Classification Decision",
+  "type": "object",
+  "required": [
+    "core_functionality",
+    "class",
+    "available_routes",
+    "confidence",
+    "legal_confirmation_recommended"
+  ],
+  "properties": {
+    "core_functionality": {
+      "type": "string"
+    },
+    "class": {
+      "enum": [
+        "default",
+        "important_class_I",
+        "important_class_II",
+        "critical"
+      ]
+    },
+    "matched_category": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "annex": {
+          "type": "string"
+        },
+        "class": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer"
+        },
+        "category": {
+          "type": "string"
+        }
+      }
+    },
+    "categories_considered": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "relationship": {
+            "enum": [
+              "matches_core_functionality",
+              "integrated_or_ancillary_only",
+              "substantially_exceeds",
+              "substantially_falls_short",
+              "no_overlap"
+            ]
+          },
+          "reasoning": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "modules_classified_separately": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "module": {
+            "type": "string"
+          },
+          "class": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "available_routes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "module_A",
+          "module_B_plus_C",
+          "module_H",
+          "european_certification_scheme"
+        ]
+      }
+    },
+    "route_notes": {
+      "type": "string"
+    },
+    "harmonised_standards_cited": {
+      "type": "boolean"
+    },
+    "foss_article_32_5": {
+      "type": "boolean"
+    },
+    "confidence": {
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "legal_confirmation_recommended": {
+      "type": "boolean"
+    },
+    "strongest_counter_argument": {
+      "type": "string"
+    },
+    "adjudication_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decided_at_utc": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

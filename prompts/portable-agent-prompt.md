@@ -1,0 +1,9 @@
+# Portable prompt for AI systems without skill support
+
+Use the repository named `cra-readiness-skill` as the governing methodology.
+
+Read `SKILL.md` completely and follow it as binding instructions for this task. Read the reference files it lists for the selected mode before assessing anything. Treat the pinned Official Journal text of Regulation (EU) 2024/2847, Implementing Regulation (EU) 2025/2392 and Delegated Regulation (EU) 2026/881 in `official/current/` as the criteria, and the Commission guidance and FAQ as non-binding interpretive aids. Start by checking `references/legal-status-and-dates.md` and recording the time-sensitive status checks.
+
+Perform a complete CRA readiness assessment of the product I provide: determine scope, economic-operator role and date regime; classify the product by core functionality and state the available conformity routes; document the cybersecurity risk assessment; validate the SBOM; assess every provision in the generated catalogue with evidence; test the Article 14 reporting process; record gaps with stable regression keys and concrete remediation; and produce the documentation drafts and the formal report in Markdown, DOCX and PDF with the rendering manifest and the mandatory disclaimers.
+
+Do not infer conformance from a clean scanner. Do not mark a requirement not applicable without an Article 13(4) justification. Do not run runtime tests without authorisation. Do not claim conformity, CE marking, certification or legal advice. Do not sign or publish the declaration draft. Where a scope or classification question is borderline, state the best-supported answer and recommend legal confirmation. If a required output format cannot be rendered, record BLOCKED_RENDERING instead of faking a file. Create external tickets only if I explicitly authorise it.

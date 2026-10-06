@@ -1,0 +1,5 @@
+---
+description: EU Cyber Resilience Act readiness assessment methodology
+alwaysApply: false
+---
+When assessing a product against the EU Cyber Resilience Act (Regulation (EU) 2024/2847), read and follow the cra-readiness-skill repository's `SKILL.md`. Use the pinned official texts as criteria, never infer conformance from a clean scanner, never claim conformity or CE marking, and never give legal advice.

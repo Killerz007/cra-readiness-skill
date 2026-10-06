@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Readiness Gap",
+  "type": "object",
+  "required": [
+    "gap_id",
+    "regression_key",
+    "title",
+    "rating",
+    "status",
+    "provision_ids",
+    "finding",
+    "risk_and_implication",
+    "recommendation",
+    "retest_criteria"
+  ],
+  "properties": {
+    "gap_id": {
+      "type": "string",
+      "pattern": "^CRA-G-[0-9]{3,}$"
+    },
+    "regression_key": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Stable key for the same weakness across assessments, e.g. AI.P1.2b:default-credentials:admin-ui"
+    },
+    "title": {
+      "type": "string"
+    },
+    "rating": {
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low",
+        "Observation"
+      ]
+    },
+    "status": {
+      "enum": [
+        "Open",
+        "Partially Remediated",
+        "Closed",
+        "Unable to Retest"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "Confirmed",
+        "High confidence",
+        "Needs validation"
+      ]
+    },
+    "provision_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "legal_exposure": {
+      "type": "object",
+      "properties": {
+        "applies_from": {
+          "type": "string"
+        },
+        "live_now": {
+          "type": "boolean"
+        },
+        "fine_tier": {
+          "enum": [
+            "article_64_2",
+            "article_64_3",
+            "article_64_4",
+            "none"
+          ]
+        }
+      }
+    },
+    "affected_components": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cwe": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cvss": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "finding": {
+      "type": "string"
+    },
+    "risk_and_implication": {
+      "type": "string"
+    },
+    "reproduction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recommendation": {
+      "type": "string"
+    },
+    "implementation_guidance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "documentation_change": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retest_criteria": {
+      "type": "string"
+    },
+    "target_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "adjudication_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ticket_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

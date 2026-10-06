@@ -1,0 +1,31 @@
+{
+  "canonical_markdown": {
+    "path": "20-cra-readiness-report.md",
+    "sha256": null
+  },
+  "outputs": [
+    {
+      "format": "docx",
+      "path": "20-cra-readiness-report.docx",
+      "sha256": null,
+      "status": "BLOCKED_RENDERING",
+      "renderer": null,
+      "renderer_version": null,
+      "page_count": null,
+      "visual_qa": "not_performed",
+      "limitations": "not yet rendered"
+    },
+    {
+      "format": "pdf",
+      "path": "20-cra-readiness-report.pdf",
+      "sha256": null,
+      "status": "BLOCKED_RENDERING",
+      "renderer": null,
+      "renderer_version": null,
+      "page_count": null,
+      "visual_qa": "not_performed",
+      "limitations": "not yet rendered"
+    }
+  ],
+  "rendered_at": null
+}

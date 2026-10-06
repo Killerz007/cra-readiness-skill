@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRA Adjudication Record",
+  "type": "object",
+  "required": [
+    "adjudication_id",
+    "subject",
+    "dispute_type",
+    "candidate_conclusions",
+    "evidence_ids",
+    "legal_basis_considered",
+    "analysis",
+    "final_decision",
+    "confidence",
+    "reviewer_independence",
+    "timestamp"
+  ],
+  "properties": {
+    "adjudication_id": {
+      "type": "string",
+      "pattern": "^ADJ-[0-9]{3,}$"
+    },
+    "subject": {
+      "type": "string",
+      "description": "provision ID, gap ID, 'scope', 'classification' or 'substantial-modification'"
+    },
+    "dispute_type": {
+      "type": "string"
+    },
+    "candidate_conclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "legal_basis_considered": {
+      "type": "string"
+    },
+    "guidance_considered": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "analysis": {
+      "type": "string"
+    },
+    "final_decision": {
+      "type": "string"
+    },
+    "confidence": {
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "limitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewer_independence": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
