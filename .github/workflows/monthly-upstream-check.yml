@@ -46,14 +46,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          body=$( (cat /tmp/sync.log; echo; cat /tmp/validate.log) 2>/dev/null | tail -c 60000)
-          gh issue create --title "Official CRA text check requires maintainer review" --body "The scheduled check could not safely refresh or validate the pinned texts. The Publications Office cellar may have been unavailable, or the Official Journal markup may have changed.
-
-\`\`\`text
-${body}
-\`\`\`
-
-Do not treat the pinned baseline as current until this is reviewed."
+          log=$( (cat /tmp/sync.log; echo; cat /tmp/validate.log) 2>/dev/null | tail -c 60000)
+          printf '%s\n\n```text\n%s\n```\n\n%s\n' \
+            "The scheduled check could not safely refresh or validate the pinned texts. The Publications Office cellar may have been unavailable, or the Official Journal markup may have changed." \
+            "$log" \
+            "Do not treat the pinned baseline as current until this is reviewed." > /tmp/issue-body.md
+          gh issue create --title "Official CRA text check requires maintainer review" --body-file /tmp/issue-body.md
 
       - name: Classify changes
         if: steps.sync.outputs.exit_code == '0' && steps.validate.outputs.exit_code == '0'
