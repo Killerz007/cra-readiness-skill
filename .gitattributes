@@ -1,0 +1,5 @@
+# Keep pinned official texts byte-exact on every platform so manifest hashes verify.
+official/current/** -text
+*.pdf binary
+# Normalise everything else to LF.
+* text=auto eol=lf
