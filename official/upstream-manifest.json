@@ -1,7 +1,6 @@
 {
   "schema": "cra-readiness-skill/upstream-manifest/1",
   "tracking_policy": "Pin the English XHTML manifestation of each act from the EU Publications Office cellar by SHA-256; human review required before any baseline change. Commission guidance and FAQ are non-binding and tracked separately.",
-  "last_checked_utc": "2026-10-06T14:16:00+00:00",
   "regulation_short_name": "Cyber Resilience Act (CRA)",
   "key_dates": {
     "entry_into_force": "2024-12-10",
@@ -9,49 +8,6 @@
     "article_14_reporting_applies_from": "2026-09-11",
     "general_application": "2027-12-11",
     "article_69_1_type_examination_certificates_valid_until": "2028-06-11"
-  },
-  "sources": {
-    "regulation": {
-      "celex": "32024R2847",
-      "title": "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements and amending Regulations (EU) No 168/2013 and (EU) 2019/1020 and Directive (EU) 2020/1828 (Cyber Resilience Act)",
-      "eli": "http://data.europa.eu/eli/reg/2024/2847/oj",
-      "oj": "OJ L, 2024/2847, 20.11.2024",
-      "cellar_url": "http://publications.europa.eu/resource/celex/32024R2847",
-      "local_file": "CRA-2024-2847.xhtml",
-      "sha256": "fe0cca4a0caec50e7cf5a91432b94a19b211f86be8584fdba56372bdcea571ed",
-      "size": 710696,
-      "fetched_at_utc": "2026-10-06T17:20:00+00:00",
-      "known_corrigenda": [
-        {
-          "published": "2024-12-05",
-          "eli": "http://data.europa.eu/eli/reg/2024/2847/corrigendum/2024-12-05/oj",
-          "note": "Corrects the introductory wording of Article 64(10) from 'paragraphs 3 to 9' to 'paragraphs 2 to 9'. The pinned XHTML predates this corrigendum (converter run 2024-11-25); apply the corrected wording when citing Article 64(10)."
-        }
-      ]
-    },
-    "implementing_regulation_2025_2392": {
-      "celex": "32025R2392",
-      "title": "Commission Implementing Regulation (EU) 2025/2392 of 28 November 2025 on the technical description of the categories of important and critical products with digital elements pursuant to Regulation (EU) 2024/2847",
-      "eli": "http://data.europa.eu/eli/reg_impl/2025/2392/oj",
-      "oj": "OJ L, 2025/2392, 1.12.2025",
-      "entry_into_force": "2025-12-21",
-      "cellar_url": "http://publications.europa.eu/resource/celex/32025R2392",
-      "local_file": "IR-2025-2392.xhtml",
-      "sha256": "8dd48c7990527289ea46b5bd2f3c4dbbac95a89d99de2f3aa5388c3bc9398e0e",
-      "size": 78082,
-      "fetched_at_utc": "2026-10-06T17:33:00+00:00"
-    },
-    "delegated_regulation_2026_881": {
-      "celex": "32026R0881",
-      "title": "Commission Delegated Regulation (EU) 2026/881 of 11 December 2025 supplementing Regulation (EU) 2024/2847 by specifying the terms and conditions for applying the cybersecurity-related grounds in relation to delaying the dissemination of notifications",
-      "eli": "http://data.europa.eu/eli/reg_del/2026/881/oj",
-      "oj": "OJ L, 2026/881, 20.4.2026",
-      "cellar_url": "http://publications.europa.eu/resource/celex/32026R0881",
-      "local_file": "CDR-2026-0881.xhtml",
-      "sha256": "87e373481fb6df59f6634f6e9613a58b26d1617ac603c9f1df8258525911c0a9",
-      "size": 29368,
-      "fetched_at_utc": "2026-10-06T14:16:00+00:00"
-    }
   },
   "non_binding_guidance": {
     "commission_guidance_C2026_5252": {
@@ -89,5 +45,49 @@
     "sbom_format_implementing_act_article_13_24": "None identified as adopted. Re-verify.",
     "notification_format_implementing_act_article_14_10": "None identified as adopted. Re-verify."
   },
-  "reuse_notice": "EU legal texts and Commission documents are reused under the Commission reuse policy (Decision 2011/833/EU) and EUR-Lex copyright notice with attribution; only the European Union Official Journal is authentic."
+  "reuse_notice": "EU legal texts and Commission documents are reused under the Commission reuse policy (Decision 2011/833/EU) and EUR-Lex copyright notice with attribution; only the European Union Official Journal is authentic.",
+  "last_checked_utc": "2026-10-06T14:18:47.567972+00:00",
+  "sources": {
+    "regulation": {
+      "celex": "32024R2847",
+      "title": "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 (Cyber Resilience Act)",
+      "eli": "http://data.europa.eu/eli/reg/2024/2847/oj",
+      "oj": "OJ L, 2024/2847, 20.11.2024",
+      "cellar_url": "http://publications.europa.eu/resource/celex/32024R2847",
+      "local_file": "CRA-2024-2847.xhtml",
+      "sha256": "fe0cca4a0caec50e7cf5a91432b94a19b211f86be8584fdba56372bdcea571ed",
+      "size": 710696,
+      "fetched_at_utc": "2026-10-06T14:18:47.567046+00:00",
+      "known_corrigenda": [
+        {
+          "published": "2024-12-05",
+          "eli": "http://data.europa.eu/eli/reg/2024/2847/corrigendum/2024-12-05/oj",
+          "note": "Corrects the introductory wording of Article 64(10) from 'paragraphs 3 to 9' to 'paragraphs 2 to 9'. The pinned XHTML predates this corrigendum (converter run 2024-11-25); apply the corrected wording when citing Article 64(10)."
+        }
+      ]
+    },
+    "implementing_regulation_2025_2392": {
+      "celex": "32025R2392",
+      "title": "Commission Implementing Regulation (EU) 2025/2392 of 28 November 2025 on the technical description of the categories of important and critical products with digital elements",
+      "eli": "http://data.europa.eu/eli/reg_impl/2025/2392/oj",
+      "oj": "OJ L, 2025/2392, 1.12.2025",
+      "entry_into_force": "2025-12-21",
+      "cellar_url": "http://publications.europa.eu/resource/celex/32025R2392",
+      "local_file": "IR-2025-2392.xhtml",
+      "sha256": "8dd48c7990527289ea46b5bd2f3c4dbbac95a89d99de2f3aa5388c3bc9398e0e",
+      "size": 78082,
+      "fetched_at_utc": "2026-10-06T14:18:47.567149+00:00"
+    },
+    "delegated_regulation_2026_881": {
+      "celex": "32026R0881",
+      "title": "Commission Delegated Regulation (EU) 2026/881 of 11 December 2025 specifying the terms and conditions for applying the cybersecurity-related grounds in relation to delaying the dissemination of notifications",
+      "eli": "http://data.europa.eu/eli/reg_del/2026/881/oj",
+      "oj": "OJ L, 2026/881, 20.4.2026",
+      "cellar_url": "http://publications.europa.eu/resource/celex/32026R0881",
+      "local_file": "CDR-2026-0881.xhtml",
+      "sha256": "87e373481fb6df59f6634f6e9613a58b26d1617ac603c9f1df8258525911c0a9",
+      "size": 29368,
+      "fetched_at_utc": "2026-10-06T14:18:47.567178+00:00"
+    }
+  }
 }
