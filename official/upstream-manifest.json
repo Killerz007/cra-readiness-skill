@@ -49,8 +49,8 @@
       "cellar_url": "http://publications.europa.eu/resource/celex/32026R0881",
       "local_file": "CDR-2026-0881.txt",
       "format_note": "Text rendering captured from the EUR-Lex HTML view on 2026-10-06 because the cellar had not yet materialised the XHTML manifestation. sync_official_text.py replaces it with the cellar XHTML when available.",
-      "sha256": "ba58ba9c49abc2925e65f3fea23192dcdd0ccd53a34bad6bbe674c5db5155667",
-      "size": 15942,
+      "sha256": "250e610f32cef16b51881d4564d5b15058505d340021b983f4d5a6312178e1fb",
+      "size": 15741,
       "fetched_at_utc": "2026-10-06T17:28:00+00:00"
     }
   },
